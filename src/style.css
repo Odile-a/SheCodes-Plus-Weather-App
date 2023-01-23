@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    color: #272142;
+    color: #212121;
     font-size: 38px;
     font-weight: 700;
     line-height: 29px;
@@ -20,11 +20,15 @@ li {
   margin: 0;
   padding: 0;
 }
-
+small {
+    border-top: 1px solid #f9f7fe;
+    padding-top: 40px;
+}
 .weather-app {
   background: #fff;
   border-radius: 16px;
-  color: #878787;
+  color: #A9A7B3;
+  font-size: 16px;
   max-width: 600px;
   margin: 30px auto;
   padding: 40px;
@@ -36,7 +40,26 @@ li {
   padding-bottom: 30px;
 }
 
+.actual-weather-icone {
+    color: #212121;
+    font-size: 52px;
+    --fa-animation-duration: 120s;
+}
+
+.temperature {
+    color: #212121;
+    font-size: 80px;
+    margin-left: 10px
+}
+
+.unit {
+    color: #212121;
+    font-size: 28px;
+    position: relative;
+    top: -30px;
+}
+
 .forecast {
-  border-bottom: 1px solid #f9f7fe;
-  padding-bottom: 30px;
+  margin: 40px 0;
+  padding-bottom: 50px;
 }
