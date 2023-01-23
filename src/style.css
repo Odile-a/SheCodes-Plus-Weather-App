@@ -30,3 +30,13 @@ li {
   padding: 40px;
   box-shadow: 0px 0px 20px rgb(65 50 100 / 8%);
 }
+
+.first-row {
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
+
+.forecast {
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
+}
