@@ -10,8 +10,23 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hello Word</h1>
-        <a href="" class="btn btn-primary">Click</a>
+        <div class="weather-app">
+            <form class="input-group first-row " id="search-form" >
+            <input type="text" class="form-control bg-subtle border border-dark-subtle" placeholder="City" aria-label="City's research with two button addons search and local" id="search-city-input">
+            <button class="btn btn-outline-secondary  opacity-50 btn btn-outline-warning " type="submit" id="search-button">Search</button>
+            <button class="btn btn-outline-secondary  opacity-50 btn btn-outline-warning" type="button" id="location-button">Local</button>
+            </form>
+            <hr/>
+            <h1>San Francisco</h1>
+            <ul>
+                <li>
+                    <span class="day">Monday</span><span class="time">12:32</span>,<span class="weather">clear sky</span>
+                </li>
+                <li>
+                    Humidity: <span class="humidity">41%</span>, Wind: <span class="wind">5.14km/h</span>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 <script src="src/app.js"></script>
