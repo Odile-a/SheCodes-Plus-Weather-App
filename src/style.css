@@ -20,10 +20,16 @@ li {
   margin: 0;
   padding: 0;
 }
+
 small {
     border-top: 1px solid #f9f7fe;
     padding-top: 40px;
+    text-align: center;
 }
+small a {
+    color: #885df1;
+}
+
 .weather-app {
   background: #fff;
   border-radius: 16px;
@@ -40,8 +46,41 @@ small {
   padding-bottom: 30px;
 }
 
+.form-control {
+    background: #f9f7fe;
+    border-color: #f8d594 !important;
+}
+
+.btn {
+    background: #885df1;
+    font-weight: 700;
+    color: #f8d594;
+    --bs-btn-border-color: #f8d594;
+}
+.btn:hover{
+    background: #f8d594;
+    color: #fff;
+}
+
+.humidity, 
+.wind,
+.max-temp {
+    color:#f65282 ;
+}
+
+.max-temp,
+.min-temp {
+    font-size: 18px;
+    font-weight:600;
+}
+
+.min-temp{
+    color: #FA98B5;
+}
+
 .actual-weather-icone {
     color: #212121;
+    display: block;
     font-size: 52px;
     --fa-animation-duration: 120s;
 }
@@ -49,17 +88,25 @@ small {
 .temperature {
     color: #212121;
     font-size: 80px;
-    margin-left: 10px
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 .unit {
     color: #212121;
     font-size: 28px;
     position: relative;
-    top: -30px;
+    top: -15px;
 }
 
 .forecast {
   margin: 40px 0;
   padding-bottom: 50px;
+}
+
+.weather-icone {
+    color: #212121;
+    display: block;
+    font-size: 35px;
+    margin: 20px auto;
 }
