@@ -26,7 +26,6 @@ li .weather {
 }
 
 small {
-    border-top: 1px solid #f9f7fe;
     padding-top: 40px;
     text-align: center;
 }
@@ -104,6 +103,7 @@ small a {
 }
 
 .forecast {
+  border-bottom: 1px solid #f9f7fe;
   margin: 40px 0;
   padding-bottom: 50px;
 }
