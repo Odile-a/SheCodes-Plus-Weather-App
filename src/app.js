@@ -1,5 +1,3 @@
-// Search form
-
 function formatDate (timestamp) {
     let date = new Date(timestamp);
     let hours = date.getHours();
@@ -58,4 +56,4 @@ searchCityDatas(cityInput.value);
 }
 
 let form =document.querySelector("#search-form");
-form.addEventListener ("click", submitSearchButton);
+form.addEventListener ("submit", submitSearchButton);
