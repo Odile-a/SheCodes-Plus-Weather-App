@@ -21,11 +21,9 @@ function formatDate (timestamp) {
     ];
     let day = days[date.getDay()];
     return `${day} ${hours}:${minutes}`;
-
 }
 
 function displayDatas (position) {
-console.log(position.data.temperature.current);
 let temp = Math.round(position.data.temperature.current);
 let temperatureElement = document.querySelector("#temperature");
 temperatureElement.innerHTML = temp;
