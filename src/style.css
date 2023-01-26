@@ -111,6 +111,12 @@ small a {
     cursor:default
 }
 
+.actual-weather{    
+    border-bottom: 1px solid #f9f7fe;
+    padding-bottom: 20px;
+}
+
+
 .forecast {
   border-bottom: 1px solid #f9f7fe;
   margin: 40px 0;
