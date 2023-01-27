@@ -67,17 +67,17 @@ small a {
 
 .humidity, 
 .wind,
-.max-temp {
+.weather-forecast-temperature-max {
     color:#f65282 ;
 }
 
-.max-temp,
-.min-temp {
+.weather-forecast-temperature-max,
+.weather-forecast-temperature-min {
     font-size: 18px;
     font-weight:600;
 }
 
-.min-temp{
+.weather-forecast-temperature-min{
     color: #FA98B5;
 }
 /*
@@ -117,10 +117,11 @@ small a {
 }
 
 
-.forecast {
+.weather-forecast {
   border-bottom: 1px solid #f9f7fe;
   margin: 40px 0;
   padding-bottom: 50px;
+  text-align: center;
 }
 
 .weather-icon {
