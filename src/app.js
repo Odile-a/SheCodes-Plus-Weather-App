@@ -24,7 +24,9 @@ function formatDate (timestamp) {
 }
 
 //display forecast
-function displayForecast() {
+
+function displayForecast(response) {
+console.log(response.data.daily);
 let forecastElement = document.querySelector("#forecast");
 let forecastHTML = `<div class="row">`;
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
@@ -51,6 +53,15 @@ forecastHTML= forecastHTML + `</div>`;
 forecastElement.innerHTML=forecastHTML;
 }
 
+//Calls the API url to get forecast data based on city name searched
+function getForecast (city) {
+    let apiKey = "e69t289845146b794bf2d43o9ea60040";
+    let units = "metric";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=${units}`;
+    console.log(apiUrl);
+    axios.get(apiUrl).then(displayForecast);
+}
+
 // Display city datas after searching
 
 function displayDatas (position) {
@@ -58,9 +69,6 @@ let city = document.querySelector("h1");
 city.innerHTML = position.data.city;
 let tempCelsius = Math.round(position.data.temperature.current);
 let temperatureElement = document.querySelector("#temperature");
-celciusTemperature = Math.round(position.data.temperature.current);
-toFahrenheit.classList.remove("active");
-toCelsius.classList.add("active");
 temperatureElement.innerHTML = `${tempCelsius}`;
 let descriptionElement = document.querySelector("#description");
 descriptionElement.innerHTML=position.data.condition.description;
@@ -73,6 +81,8 @@ let iconElement = document.querySelector("#icon");
 iconElement.setAttribute ( "src", `${position.data.condition.icon_url}`);
 let dayElement=document.querySelector("#date");
 dayElement.innerHTML = (formatDate(position.data.time*1000));
+
+getForecast(position.data.city);
 }
 
 //Calls the API url to get weather data based on city name searched
@@ -128,5 +138,3 @@ let toCelsius = document.querySelector("#c-link");
 toCelsius.addEventListener("click", displayCelsius);
 
 search("Avignon");
-
-displayForecast();
