@@ -80,14 +80,7 @@ small a {
 .weather-forecast-temperature-min{
     color: #FA98B5;
 }
-/*
-.actual-weather-icon {
-    color: #3c3c3c;
-    display: block;
-    font-size: 52px;
-    --fa-animation-duration: 120s;
-}
-*/ 
+
 .temperature {
     color: #3c3c3c;
     font-size: 80px;
@@ -96,19 +89,10 @@ small a {
 }
 
 .units {
-    color: #885df1;
+    color: #3c3c3c;
     font-size: 28px;
     position: relative;
     top: -15px;
-    text-decoration: none;
-}
-.slash {
-    margin: 0px 4px 0px 6px;
-}
-.active,
-.slash {
-    color: #3c3c3c;
-    cursor:default
 }
 
 .actual-weather{    

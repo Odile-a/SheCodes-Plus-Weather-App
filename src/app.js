@@ -67,7 +67,6 @@ function getForecast (city) {
     let apiKey = "e69t289845146b794bf2d43o9ea60040";
     let units = "metric";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=${units}`;
-    console.log(apiUrl);
     axios.get(apiUrl).then(displayForecast);
 }
 
@@ -110,40 +109,5 @@ search(cityInputElement.value);
 
 let form =document.querySelector("#search-form");
 form.addEventListener ("submit", submitSearchButton);
-
-
-
-// units
-
-
-//Converts temp to Fahrenheit when "F" is clicked
-function displayFahrenheit (event) {
-    event.preventDefault();
-    toCelsius.classList.remove("active");
-    toFahrenheit.classList.add("active");
-    let temperatureElement = document.querySelector("#temperature");
-    let fahrenheitTemperature = (celciusTemperature * 9)/5 + 32;
-    temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
-  }
-
-//Converts temp to Celsius when "C" is clicked  
-  function displayCelsius(event) {
-    event.preventDefault();
-    toFahrenheit.classList.remove("active");
-    toCelsius.classList.add("active");
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(celciusTemperature);
-  }
-
-//Global variable for Celsius temperature value
-let celciusTemperature = null;
-
-//Converts temp to Fahrenheit when "F" is clicked
-let toFahrenheit = document.querySelector("#f-link");
-toFahrenheit.addEventListener("click", displayFahrenheit);
-
-//Converts temp to Celsius when "C" is clicked
-let toCelsius = document.querySelector("#c-link");
-toCelsius.addEventListener("click", displayCelsius);
 
 search("Avignon");
