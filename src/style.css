@@ -1,5 +1,6 @@
 body {
     background: #F9F7FE;
+    margin: 60px auto;
 }
 
 h1 {
@@ -38,7 +39,7 @@ small a {
   border-radius: 16px;
   color: #A9A7B3;
   font-size: 16px;
-  max-width: 600px;
+  max-width: 696px;
   margin: 30px auto;
   padding: 40px;
   box-shadow: 0px 0px 20px rgb(65 50 100 / 8%);
@@ -46,7 +47,7 @@ small a {
 
 .first-row {
   border-bottom: 1px solid #f9f7fe;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 .form-control {
@@ -58,11 +59,12 @@ small a {
     background: #885df1;
     font-weight: 700;
     color: #f8d594;
-    --bs-btn-border-color: #f8d594;
+    border-color: #f8d594 ;
 }
 .btn:hover{
     background: #f8d594;
     color: #fff;
+    --bs-btn-border-color: #f8d594 !important;
 }
 
 .humidity, 
@@ -96,8 +98,7 @@ small a {
 }
 
 .actual-weather{    
-    border-bottom: 1px solid #f9f7fe;
-    padding-bottom: 20px;
+    padding: 40px 0px 20px 0px;
 }
 
 
