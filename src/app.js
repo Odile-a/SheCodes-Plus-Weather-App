@@ -23,7 +23,7 @@ function formatDate (timestamp) {
     return `${day} ${hours}:${minutes}`;
 }
 
-//display forecast
+//Display forecast
 
 function formatDay (timestamp){
   let date = new Date (timestamp * 1000);
@@ -62,7 +62,7 @@ forecastHTML= forecastHTML + `</div>`;
 forecastElement.innerHTML=forecastHTML;
 }
 
-//Calls the API url to get forecast data based on city name searched
+//Call the API url to get forecast data based on city name searched
 function getForecast (city) {
     let apiKey = "e69t289845146b794bf2d43o9ea60040";
     let units = "metric";
@@ -70,7 +70,7 @@ function getForecast (city) {
     axios.get(apiUrl).then(displayForecast);
 }
 
-// Display city datas after searching
+//Display city datas after searching
 
 function displayDatas (position) {
 let city = document.querySelector("h1");
@@ -93,7 +93,7 @@ dayElement.innerHTML = (formatDate(position.data.time*1000));
 getForecast(position.data.city);
 }
 
-//Calls the API url to get weather data based on city name searched
+//Call the API url to get weather data based on city name searched
 function search (city){
 let apiKey = "e69t289845146b794bf2d43o9ea60040";
 let units = "metric";
@@ -110,4 +110,25 @@ search(cityInputElement.value);
 let form =document.querySelector("#search-form");
 form.addEventListener ("submit", submitSearchButton);
 
+// Call the API url to get local zeather data
+
+function showLocalData (position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "e69t289845146b794bf2d43o9ea60040";
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayDatas);
+}
+
+function submitLocalButton (event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showLocalData);
+}
+
+let local = document.querySelector ("#location-button");
+local.addEventListener ("click", submitLocalButton);
+
+
+// Display page data
 search("Avignon");
